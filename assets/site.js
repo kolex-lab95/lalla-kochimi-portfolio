@@ -24,7 +24,7 @@
    toolsTitle:'Tools & working methods',toolsCollect:'Data collection & monitoring',toolsOffice:'Office applications',toolsCollab:'Collaboration & digital',toolsMethods:'Working methods',toolsMethodsVal:'Activity monitoring · Outreach · Coordination · Reporting',
    educationTitle:'Education & development',education1:'Bachelor’s degree in Geography',education2:'Secondary school diploma · A4 stream',education3:'Infant nutrition & early childhood development',complaints:'grievance management',education4:'Environmental & social safeguards',education4Desc:'Vulnerable household targeting · Cash for Work',education5:'Technical guidance on behavioural change',
    languagesLabel:'LANGUAGES',frenchLanguage:'French',englishLanguage:'English (basic)',
-   contactKicker:'CONTACT & MOBILITY',contactTitle:'A new mission to build together?',contactDesc:'Based in Agadez and open to assignments and travel according to programme needs. For collaboration, inquiries or requests for a CV, please use the contact information below.',writeEmail:'Send an email',emailLabel:'EMAIL ADDRESS',phoneLabel:'PRIMARY PHONE',phoneSecond:'SECONDARY PHONE',based:'LOCATION & MOBILITY',locationContact:'Agadez, Niger · National and international mobility',footerTag:'Social protection · Field engagement · Community development',imageEthics:'© 2026 Azouma KOCHIMI LALA. All rights reserved.',backTop:'Back to top ↑'
+   contactKicker:'CONTACT & MOBILITY',contactTitle:'A new mission to build together?',contactDesc:'Based in Agadez and open to assignments and travel according to programme needs. For collaboration, inquiries or requests for a CV, please use the contact information below.',writeEmail:'Send an email',emailLabel:'EMAIL ADDRESS',phoneLabel:'PRIMARY PHONE',phoneSecond:'SECONDARY PHONE',based:'LOCATION & MOBILITY',locationContact:'Agadez, Niger · National and international mobility',footerTag:'Social protection · Field engagement · Community development',imageEthics:'© 2026 Azouma KOCHIMI LALA. All rights reserved.',backTop:'Back to top ↑',waHint:'Message Azouma'
   }
  };
  let lang='fr';
@@ -45,6 +45,14 @@
    document.documentElement.lang=lang;
    langSwitch.dataset.lang=lang;
    langSwitch.setAttribute('aria-label',lang==='fr'?'Choix de la langue':'Select language');
+   const waLink=document.getElementById('whatsappFloat');
+   if(waLink){
+     const waMessage=lang==='en'?'Hello Ms. KOCHIMI LALA, I have viewed your portfolio and would like to discuss a potential opportunity with you.':'Bonjour Madame KOCHIMI LALA, j’ai consulté votre portfolio et je souhaiterais échanger avec vous au sujet d’une opportunité de collaboration.';
+     waLink.href='https://wa.me/22797983354?text='+encodeURIComponent(waMessage);
+     const waLabel=lang==='en'?'Message Azouma on WhatsApp':'Écrire à Azouma sur WhatsApp';
+     waLink.setAttribute('aria-label',waLabel);
+   }
+
    langOptions.forEach(option=>{
      const current=option.dataset.langChoice===lang;
      option.setAttribute('aria-pressed',String(current));
