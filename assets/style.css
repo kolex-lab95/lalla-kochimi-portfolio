@@ -265,7 +265,9 @@
  z-index:78;display:inline-flex;align-items:center;justify-content:flex-end;gap:13px;
  width:max-content;min-width:62px;min-height:62px;color:#fff;text-decoration:none;
  -webkit-tap-highlight-color:transparent;isolation:isolate;
+ transition:transform .34s cubic-bezier(.2,.75,.2,1),right .28s ease,bottom .28s ease;
 }
+.wa-fab.is-lifted{transform:translateY(-88px)}
 /* Deux anneaux s'éloignent du bouton à intervalles décalés.
    Ils restent perceptibles grâce à une bordure nette et une légère lueur. */
 .wa-fab::before,.wa-fab::after{
@@ -359,6 +361,15 @@
  .wa-fab__orb::before{inset:-10px}
  .wa-fab__orb svg{width:27px;height:27px}
  .wa-fab__hint{display:none}
+}
+@media (min-width:1025px){
+ .wa-fab.is-lifted{transform:translateY(-76px)}
+}
+@media (min-width:601px) and (max-width:1024px){
+ .wa-fab.is-lifted{transform:translateY(-84px)}
+}
+@media (max-width:600px){
+ .wa-fab.is-lifted{transform:translateY(-92px)}
 }
 @media (prefers-reduced-motion:reduce){
  .wa-fab::before,.wa-fab::after,.wa-fab__orb{animation:none!important}

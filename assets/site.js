@@ -124,5 +124,13 @@
  }));
  closeBox?.addEventListener('click',closeLightbox);
  lightbox?.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
+ const waFab=document.querySelector('.wa-fab');
+ const footer=document.querySelector('.site-footer');
+ if(waFab && footer && 'IntersectionObserver' in window){
+   const footerObserver=new IntersectionObserver(entries=>{
+     entries.forEach(entry=>waFab.classList.toggle('is-lifted',entry.isIntersecting));
+   },{rootMargin:'0px 0px 10px 0px',threshold:0.06});
+   footerObserver.observe(footer);
+ }
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!lightbox?.hidden)closeLightbox();else closeMenu({restoreFocus:true})}});
 })();
