@@ -653,3 +653,16 @@
     text-wrap:pretty;
   }
 }
+
+/* Composition des paragraphes de lecture : lignes cadrées et mots intacts. */
+:is(.hero-grid .hero-intro,.section-intro .body-copy,.moment-copy>p,
+    .experience-body>p:last-child,.office-copy>p,.story-heading>p,.contact-copy>p){
+  text-align:justify;
+  text-align-last:left;
+  text-justify:inter-word;
+  hyphens:none;
+  -webkit-hyphens:none;
+  word-break:normal;
+  overflow-wrap:normal;
+  text-wrap:pretty;
+}
