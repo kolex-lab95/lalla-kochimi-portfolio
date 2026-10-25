@@ -1,28 +1,35 @@
-# AZOUMA KOCHIMI LALA — Portfolio professionnel
+# Azouma KOCHIMI LALA — Portfolio
 
-Site officiel de présentation du parcours d’Azouma KOCHIMI LALA, de ses domaines d’intervention et de ses qualifications en animation de terrain, protection sociale et mobilisation communautaire.
+Portfolio professionnel consacré à la protection sociale, à la mobilisation communautaire et à la coordination des interventions de terrain.
+
+## Organisation
+
+```text
+lalla-kochimi-portfolio/
+├── index.html
+├── assets/
+│   ├── style.css
+│   ├── site.js
+│   ├── images/
+│   └── CV_Azouma_KOCHIMI_LALA.pdf
+├── favicon.svg
+└── README.md
+```
+
+Le site est développé en HTML, CSS et JavaScript, sans dépendance externe ni étape de compilation. L'interface est disponible en français et en anglais et s'adapte aux écrans mobiles, tablettes et ordinateurs.
 
 ## Publication
 
-Le site est statique. Il peut être hébergé directement sur Netlify ou tout hébergement acceptant HTML, CSS et JavaScript. Publier ensemble `index.html` et le dossier `assets/` à la racine du site. Aucune compilation ni installation de dépendances n’est requise.
+Le dossier peut être publié sur Netlify ou sur un hébergement statique équivalent. Pour un déploiement depuis GitHub, sélectionner la branche `main` et utiliser la racine du dépôt comme répertoire de publication ; aucune commande de build n'est nécessaire.
 
-## Contenu du dossier
+## Contenu et médias
 
-- `index.html` — structure et contenus du portfolio
-- `assets/style.css` — styles et adaptations responsive
-- `assets/site.js` — navigation, sélection FR/EN et galerie
-- `assets/images/` — photographies et illustrations
-- `assets/CV_Azouma_KOCHIMI_LALA.pdf` — CV proposé au téléchargement
-- `favicon.svg` — identité graphique du site
+Les contenus du site sont structurés dans `index.html`, avec les traductions anglaises dans `assets/site.js`. Les photographies personnelles et les scènes d'illustration sont rangées dans `assets/images/`. Le CV proposé en téléchargement se trouve dans `assets/`.
 
-## Photographies et illustrations
+## Contact
 
-Les deux photographies personnelles et les illustrations de contexte sont conservées séparément. Les scènes de village sont des représentations générées, utilisées pour évoquer les cadres d’intervention ; elles ne constituent pas des photographies d’activités documentées.
+- **E-mail :** lallakochimi@gmail.com
+- **Téléphone :** +227 97 98 33 54 / +227 92 57 05 18
+- **Site :** https://lalla-kochimi-portfolio.netlify.app/
 
-## Contacts
-
-- E-mail : lallakochimi@gmail.com
-- Téléphone : +227 97 98 33 54 / +227 92 57 05 18
-- Adresse de publication envisagée : lalla-kochimi-portfolio.netlify.app
-
-Les coordonnées et le CV peuvent être actualisés directement dans les fichiers du site avant publication.
+© 2026 Azouma KOCHIMI LALA. Tous droits réservés.
