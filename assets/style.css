@@ -375,3 +375,281 @@
  .wa-fab::before,.wa-fab::after,.wa-fab__orb{animation:none!important}
  .wa-fab__hint,.wa-fab__orb{transition:none!important}
 }
+
+/* Rythme de lecture et centrage des indicateurs */
+.milestones > div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-width:0;
+  min-height:131px;
+  padding:23px 19px;
+}
+.milestones strong {
+  display:block;
+  margin-inline:auto;
+  line-height:1.12;
+  text-align:center;
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+}
+.milestones span {
+  display:block;
+  max-width:34ch;
+  margin:9px auto 0;
+  text-align:center;
+  text-align-last:center;
+  line-height:1.52;
+  word-spacing:normal;
+  text-wrap:wrap;
+  hyphens:none;
+}
+
+/* Tablettes et formats intermédiaires : une vraie largeur de lecture. */
+@media (max-width:1024px) {
+  .section-top {
+    display:block;
+    gap:0;
+    align-items:initial;
+  }
+  .section-top > div {max-width:100%}
+  .section-top > p {
+    max-width:65ch;
+    margin:15px 0 0;
+  }
+  :is(.section-top h2,.section-intro h2,.story-heading h2,.office-copy h2,.contact-copy h2) {
+    font-size:clamp(31px,4.7vw,43px);
+    line-height:1.17;
+    letter-spacing:-.045em;
+    hyphens:none;
+    word-break:normal;
+    text-wrap:balance;
+  }
+  :is(.hero-intro,.body-copy,.moment-copy > p,.lead,.section-top > p,
+      .story-heading > p,.experience-body > p,.expertise-card p,
+      .pillar p,.office-copy > p,.contact-copy > p,.formation-row p,
+      .language-line p,.tool-row b,.office-points b) {
+    text-align:left;
+    text-align-last:auto;
+    text-justify:auto;
+    word-spacing:normal;
+    hyphens:none;
+    word-break:normal;
+    text-wrap:wrap;
+  }
+  .milestones > div {padding:23px 14px}
+  .milestones span {font-size:11.5px}
+}
+
+@media (max-width:900px) {
+  .identity-grid,.story-layout,.office-grid,.contact-shell {
+    grid-template-columns:minmax(0,1fr);
+    gap:29px;
+  }
+  .identity-grid {padding-top:30px}
+  .pillars {max-width:100%}
+  .story-heading > p {max-width:65ch}
+  .story-pictures {max-width:790px}
+  .skills-grid {grid-template-columns:minmax(0,1fr)}
+  .skills-panel {min-width:0}
+  .office-copy > p {max-width:68ch}
+  .contact-shell {padding:36px}
+  .section-top > p {max-width:65ch}
+}
+
+/* À la frontière téléphone/tablette, les trois statistiques restent égales. */
+@media (min-width:641px) and (max-width:770px) {
+  .milestones {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .milestones > div:last-child {grid-column:auto;border-top:0;border-left:1px solid #e8dfcf}
+  .milestones > div {min-height:125px;padding:20px 10px}
+  .milestones strong {font-size:clamp(27px,4.1vw,33px)}
+  .milestones span {font-size:11px;line-height:1.45}
+}
+
+/* Mobile : aucune statistique compressée dans une demi-colonne. */
+@media (max-width:640px) {
+  .milestones {
+    grid-template-columns:minmax(0,1fr);
+    border-radius:19px;
+  }
+  .milestones > div {
+    grid-column:auto;
+    min-height:99px;
+    padding:16px 19px;
+    border-left:0!important;
+    border-top:0;
+  }
+  .milestones > div + div {border-top:1px solid #e8dfcf}
+  .milestones > div:last-child {grid-column:auto;border-left:0}
+  .milestones strong {font-size:31px;letter-spacing:-.045em}
+  .milestones strong small {font-size:14px}
+  .milestones span {
+    max-width:49ch;
+    margin-top:6px;
+    font-size:11.5px;
+    line-height:1.5;
+  }
+}
+
+/* Petits écrans : réduction raisonnée de la typographie, sans césure. */
+@media (max-width:770px) {
+  :is(.section-intro h2,.section-top h2,.story-heading h2,.office-copy h2,.contact-copy h2) {
+    font-size:clamp(28px,5.6vw,38px);
+    line-height:1.18;
+    letter-spacing:-.042em;
+    margin-bottom:18px;
+    text-wrap:balance;
+  }
+  .section-top h2 {margin-bottom:0}
+  .section-top > p {margin-top:12px;max-width:67ch}
+  .story-heading > p {max-width:67ch}
+  .moment-copy h2 {
+    max-width:19ch;
+    font-size:clamp(32px,6.7vw,48px);
+    line-height:1.12;
+    letter-spacing:-.042em;
+    text-wrap:balance;
+  }
+  .lead {font-size:clamp(14.5px,2.7vw,16px);line-height:1.72}
+  .hero-intro,.body-copy,.moment-copy > p,.office-copy > p,
+  .contact-copy > p,.section-top > p,.story-heading > p {
+    line-height:1.73;
+    max-width:68ch;
+  }
+  .hero-last {white-space:normal;letter-spacing:-.047em}
+  .pillars {max-width:100%}
+  .identity-grid,.story-layout,.office-grid,.contact-shell {gap:26px}
+  .contact-shell {padding:30px 27px}
+  .language-line {gap:17px}
+}
+
+@media (max-width:530px) {
+  :is(.section-intro h2,.section-top h2,.story-heading h2,.office-copy h2,.contact-copy h2) {
+    font-size:clamp(27px,7vw,34px);
+    line-height:1.19;
+    letter-spacing:-.038em;
+    text-wrap:balance;
+  }
+  .hero-first {font-size:clamp(42px,10.4vw,55px)}
+  .hero-last {font-size:clamp(30px,8.1vw,42px);line-height:1.08}
+  .hero h2 {font-size:clamp(16px,4.15vw,18px);line-height:1.38}
+  .moment-copy h2 {
+    max-width:20ch;
+    font-size:clamp(29px,7.45vw,38px);
+    line-height:1.13;
+  }
+  .section-top > p,.story-heading > p,.office-copy > p,
+  .contact-copy > p,.hero-intro,.body-copy,.moment-copy > p {
+    font-size:clamp(12.5px,3.45vw,13.5px);
+    line-height:1.73;
+    text-align:left;
+    text-align-last:auto;
+    text-wrap:wrap;
+  }
+  .eyebrow,.overline {letter-spacing:.12em;line-height:1.45}
+  .pillar h3,.expertise-card h3 {font-size:clamp(16px,4vw,18px)}
+  .panel-heading h3 {font-size:clamp(16px,4vw,19px);line-height:1.28}
+  .contact-shell {padding:25px 19px}
+  .office-image-note {max-width:calc(100% - 30px);font-size:9px;line-height:1.45;letter-spacing:.09em}
+  .hero-location {align-items:flex-start;line-height:1.45}
+  .hero-location .pulse {flex:none;margin-top:6px}
+  .formation-row {grid-template-columns:42px minmax(0,1fr);gap:12px}
+  .formation-row h4 {font-size:13px;line-height:1.44}
+  .tool-row b {font-size:13px;line-height:1.56}
+}
+
+@media (max-width:360px) {
+  .hero-last {font-size:29px}
+  .moment-copy h2 {font-size:28px}
+  :is(.section-intro h2,.section-top h2,.story-heading h2,.office-copy h2,.contact-copy h2) {
+    font-size:26px;
+  }
+  .milestones > div {padding-inline:16px}
+  .milestones span {font-size:11px}
+}
+
+/* Ajustements de lecture : les indicateurs conservent leur composition d'origine. */
+.milestones {
+  border-radius:0 0 16px 16px;
+}
+.milestones > div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.milestones strong,
+.milestones span {
+  text-align:center;
+  text-align-last:center;
+  margin-inline:auto;
+  hyphens:none;
+  word-break:normal;
+}
+
+/* Sur tablette étroite et téléphone : deux indicateurs au-dessus,
+   le troisième occupe la seconde ligne, sans élargir le bandeau. */
+@media (max-width:770px) {
+  .milestones {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    border-radius:0 0 16px 16px;
+  }
+  .milestones > div {
+    grid-column:auto;
+    min-width:0;
+    min-height:122px;
+    padding:18px 12px;
+    border-top:0;
+    border-left:0!important;
+  }
+  .milestones > div:nth-child(2){border-left:1px solid #e8dfcf!important}
+  .milestones > div:last-child {
+    grid-column:1 / -1;
+    min-height:102px;
+    padding:19px 18px;
+    border-left:0!important;
+    border-top:1px solid #e8dfcf;
+  }
+  .milestones strong{font-size:clamp(27px,5.2vw,33px);line-height:1.1}
+  .milestones strong small{font-size:clamp(12px,2.4vw,15px)}
+  .milestones span {
+    margin:8px auto 0;
+    max-width:29ch;
+    font-size:clamp(10.5px,1.6vw,12px);
+    line-height:1.48;
+    text-wrap:pretty;
+  }
+  .milestones > div:last-child span {max-width:44ch}
+}
+@media (max-width:395px) {
+  .milestones > div{min-height:128px;padding:18px 11px}
+  .milestones > div:last-child{min-height:100px;padding:17px 14px}
+  .milestones strong{font-size:clamp(26px,7.2vw,29px)}
+  .milestones strong small{font-size:12px}
+  .milestones span{font-size:10.8px;line-height:1.48;max-width:23ch}
+  .milestones > div:last-child span{max-width:34ch;font-size:11.3px}
+}
+
+/* Les paragraphes longs sont justifiés dans les colonnes assez larges.
+   À largeur réduite, l'alignement naturel évite les espaces étirés. */
+@media (max-width:1024px) {
+  .hero-grid .hero-intro,
+  .section-intro .body-copy,
+  .moment-copy > p,
+  .experience-body > p:last-child,
+  .office-copy > p,
+  .story-heading > p,
+  .contact-copy > p {
+    text-align:left;
+    text-align-last:auto;
+    word-spacing:normal;
+    hyphens:none;
+    -webkit-hyphens:none;
+    word-break:normal;
+    overflow-wrap:normal;
+    text-wrap:pretty;
+  }
+}
