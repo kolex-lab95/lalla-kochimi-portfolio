@@ -48,7 +48,7 @@
    const waLink=document.getElementById('whatsappFloat');
    if(waLink){
      const waMessage=lang==='en'?'Hello Ms. KOCHIMI LALA, I have viewed your portfolio and would like to discuss a potential opportunity with you.':'Bonjour Madame KOCHIMI LALA, j’ai consulté votre portfolio et je souhaiterais échanger avec vous au sujet d’une opportunité de collaboration.';
-     waLink.href='https://wa.me/22797983354?text='+encodeURIComponent(waMessage);
+     waLink.href='https://wa.me/22792570518?text='+encodeURIComponent(waMessage);
      const waLabel=lang==='en'?'Message Azouma on WhatsApp':'Écrire à Azouma sur WhatsApp';
      waLink.setAttribute('aria-label',waLabel);
    }
